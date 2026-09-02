@@ -7,6 +7,10 @@ const path = require('path');
 const crypto = require('crypto');
 
 const app = express();
+app.get('/tiktok03AroT1t49CINzmkCdAQXnVuKFdjObOA.txt', (req, res) => {
+  res.type('text/plain');
+  res.send('tiktok-developers-site-verification=03AroT1t49CINzmkCdAQXnVuKFdjObOA');
+});
 const PORT = process.env.PORT || 3000;
 
 // ---- Config from environment variables (set these in Render, never hardcode) ----
