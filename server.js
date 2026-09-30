@@ -4,7 +4,11 @@ const session = require('express-session');
 const multer = require('multer');
 const fs = require('fs');
 const path = require('path');
-const crypto = require('crypto');
+const crypto = require('crypto');const mongoose = require('mongoose');
+
+mongoose.connect(process.env.MONGODB_URI)
+  .then(() => console.log('Connected to MongoDB'))
+  .catch(err => console.error('MongoDB connection error:', err));
 
 const app = express();
 app.get('/tiktok03AroT1t49CINzmkCdAQXnVuKFdjObOA.txt', (req, res) => {
